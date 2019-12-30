@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --progress --colors --hot --config ./webpack.config.js --port 9001 --host 0.0.0.0",
     "build": "webpack --progress --colors --config ./webpack.config.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/setup.js 'src/**/*spec.js'",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "cnpm run test -- --watch"
   },
   "repository": {
     "type": "git",

@@ -6,9 +6,10 @@ COPY third_party ./third_party
 
 WORKDIR '/build/app'
 
-RUN npm install
-RUN npm rebuild node-sass
-RUN npm run build
+RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
+RUN cnpm rebuild node-sass
+RUN cnpm install -g webpack
+RUN cnpm run build
 
 RUN ls /build/app/dist
 

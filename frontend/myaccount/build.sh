@@ -1,5 +1,5 @@
 #!/bin/bash
 set -e
 
-npm install
-npm run build
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+cnpm run build

@@ -5,10 +5,10 @@ COPY resources ./resources
 COPY third_party ./third_party
 
 WORKDIR '/build/myaccount'
-
-RUN npm install
-RUN npm rebuild node-sass
-RUN npm run build
+RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
+RUN cnpm install
+RUN cnpm rebuild node-sass
+RUN cnpm run build
 
 RUN ls /build/myaccount/dist
 
